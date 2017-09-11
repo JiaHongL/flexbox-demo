@@ -15,11 +15,11 @@ I.flexbox：排列方式分為四種(加上reverse為相反方向).
 - column：從左到右.
 - column-reverse：從右到左.
 
-II.理解各種排列與主軸和交叉軸的關係  
+II.理解各種排列與主軸和交叉軸的關係  
 1.row 圖示 (排列方向為從左到右)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 
-PS：排列的方式為主軸(main-axis)的方向，與主軸垂直的稱為交叉軸(cross-axis).
+PS：排列方式決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
 
 詞彙解釋
 
