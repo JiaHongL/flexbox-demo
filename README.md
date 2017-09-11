@@ -38,7 +38,7 @@ PS:其實就是主軸方向翻轉，而交叉軸的方向不變.
 
 3.column 圖示 (排列方向為從上到下)  
 <img src="src/assets/images/column.jpg" width="300" height="400">  
-PS:column排列方向為上到下，所以主軸方向(main-axis)就會變成上到下.
+PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上到下.
 
 4.column-reverse 圖示 (排列方向為從下到上)  
 <img src="src/assets/images/column-reverse.jpg" width="300" height="400">
