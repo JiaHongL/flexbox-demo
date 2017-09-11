@@ -1,0 +1,93 @@
+@import "../scss/_media-queries";
+.index {
+    // background: gray;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    &>.item {
+        flex: 0 0 100%;
+    }
+}
+
+@include mq($max-width: 1000px) {
+    .wrapper {
+        padding: 20px;
+    }
+}
+
+.example-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    .example-item{
+        flex: 0 0 100%;
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom:10px;
+        .example-item-title{
+            flex: 0 0 100%;
+        }
+        .example-item-view {
+            flex: 0 0 50%;
+            position: relative;
+            min-height: 300px;
+            padding: 40px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 5px;
+            }
+        }
+        .example-item-code {
+            flex: 0 0 50%;
+            position: relative;
+            min-height: 300px;
+            padding: 20px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 2px;
+            }
+            .code {
+                font-family: 'Source Code Pro'; // background: ;
+                color: black;
+                font-size: 16px;
+                &:before {
+                    display: block;
+                    width: calc(100%);
+                    margin-left: -3px;
+                    margin-top: -3px;
+                    padding: 3px;
+                    text-transform: uppercase;
+                    content: 'scss'; //   background: $medBlue;
+                }
+            }
+        }
+    }
+
+}
+
+@include mq($max-width: 1000px) {
+    .example-container {
+        .example-item-view {
+            flex: 0 0 100%;
+        }
+        .example-item-code {
+            flex: 0 0 100%;
+        }
+    }
+}

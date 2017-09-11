@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* reset    : 樣式歸零 layout   : 整體架構 module/  : 各模組 pages/   : 各頁面
+*/
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding: 50px; }
+.wrapper > .item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+
+@media only screen and (max-width: 1000px) { .wrapper { padding: 20px; } }
+.example-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding-bottom: 1px; padding-left: 1px; }
+.example-container .example-item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; margin-bottom: 10px; }
+.example-container .example-item .example-item-title { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+.example-container .example-item .example-item-view { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; position: relative; min-height: 300px; padding: 40px; margin-right: -1px; margin-bottom: -1px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.example-container .example-item .example-item-view .title { position: absolute; top: 0; left: 0; padding: 5px; }
+.example-container .example-item .example-item-code { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; position: relative; min-height: 300px; padding: 20px; margin-right: -1px; margin-bottom: -1px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.example-container .example-item .example-item-code .title { position: absolute; top: 0; left: 0; padding: 2px; }
+.example-container .example-item .example-item-code .code { font-family: 'Source Code Pro'; color: black; font-size: 16px; }
+.example-container .example-item .example-item-code .code:before { display: block; width: calc(100%); margin-left: -3px; margin-top: -3px; padding: 3px; text-transform: uppercase; content: 'scss'; }
+
+@media only screen and (max-width: 1000px) { .example-container .example-item-view { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+  .example-container .example-item-code { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; } }
+.index .example1 .step1 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 200px; height: 200px; border: 1px solid black; }
+.index .example1 .step1 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example1 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; width: 200px; height: 200px; border: 1px solid black; }
+.index .example1 .step2 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example1 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 200px; height: 200px; border: 1px solid black; }
+.index .example1 .step3 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example1 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; width: 200px; height: 200px; border: 1px solid black; }
+.index .example1 .step4 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example2 .now .container { width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .now .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example2 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .want .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example2 .step1 .container { width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .step1 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example2 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .step2 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example2 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .step3 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example2 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .step4 .item { width: 50px; height: 50px; border: 1px solid black; }
+.index .example2 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example2 .step5 .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
