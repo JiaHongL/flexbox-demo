@@ -6,7 +6,7 @@
 | :------| :------|
 |  display | flex佈局 |
 |  flex-direction | 容器項目 排列方向 |
-|  flex-wrap | 容器項目 換行方式 |
+|  flex-wrap | 容器項目 換行方式 |
 |  justify-content | 容器項目 水平排列方式 |
 |  align-items | 容器項目 垂直排列方式(單行) |
 |  align-content | 容器項目 垂直排列方式(多行) |
