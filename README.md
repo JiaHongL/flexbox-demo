@@ -1,12 +1,12 @@
 # Flexbox
 
-## Column Row 認識
+## ㄧ、Column Row 認識
 <img src="src/assets/images/column&row.png" width="500" height="250">
 
 - column(欄)(方向為上到下)
 - row(列)(方向為左到右)
 
-## 排列方式&主軸&交叉軸 概念
+## 二、排列方式&主軸&交叉軸 概念
 
 I.flexbox：排列方式分為四種(加上reverse為相反方向).
 
@@ -50,7 +50,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | column | 從上到下 | 從左到右|
 | column-reverse | 從下到上 | 從左到右|
 
-## 容器相關屬性 (container)
+## 三、容器相關屬性 (container)
 
 |   屬性  |   作用  |
 | :------| :------|
@@ -65,7 +65,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | :------| :------|
 |  flex-flow| direction + wrap|
 
-## 項目相關屬性 (item)
+## 四、項目相關屬性 (item)
 
 |   屬性  |   作用  |
 | :------| :------|
