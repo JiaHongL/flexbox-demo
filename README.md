@@ -1,6 +1,6 @@
 # Flexbox
 
-## 容器相關屬性 (container)
+## 容器相關屬性 (container)
 
 |   屬性  |   作用  |
 | :------| :------|
@@ -8,14 +8,14 @@
 |  flex-direction | 容器項目 排列方向 |
 |  flex-wrap | 容器項目 換行方式 |
 |  justify-content | 容器項目 水平排列方式 |
-|  align-items | 容器項目 垂直排列方式(單行) |
+|  align-items | 容器項目 垂直排列方式(單行) |
 |  align-content | 容器項目 垂直排列方式(多行) |
 
 |   屬性  |   合併  |
 | :------| :------|
-|  flex-flow| direction + wrap|
+|  flex-flow| direction + wrap|
 
-## 項目相關屬性 (item)
+## 項目相關屬性 (item)
 
 |   屬性  |   作用  |
 | :------| :------|
@@ -27,4 +27,4 @@
 
 |   屬性  |   合併  |
 | :------| :------|
-|  flex-flow| grow + shrink + basis|
+|  flex-flow| grow + shrink + basis|
