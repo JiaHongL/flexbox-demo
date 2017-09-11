@@ -3,8 +3,8 @@
 ## Column Row 認識
 <img src="src/assets/images/column&row.png" width="500" height="250">
 
-- column(欄)(上到下方向排列)
-- row(列)(左到右方向排列)
+- column(欄)(方向為上到下)
+- row(列)(方向為左到右)
 
 ## flex佈局概念
 
