@@ -15,7 +15,7 @@ I.flexbox：排列方式分為四種(加上reverse為相反方向).
 - column：從左到右.
 - column-reverse：從右到左.
 
-II.
+II.理解各種排列與主軸和交叉軸的關係  
 1.row 圖示 (排列方向為從左到右)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 
