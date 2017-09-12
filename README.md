@@ -242,8 +242,8 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 |  flex-flow| grow + shrink + basis|
 
 <table>
-    <thead bgcolor="#bdbdbd" style="font-weight:bold;">
-        <tr>
+    <thead bgcolor=#7FFFD4>
+        <tr >
             <td>屬性名稱</td>
             <td colspan="2">說明</td>
         </tr>
@@ -253,7 +253,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td>功能</td>
         </tr>
    </thead>
-   <tbody bgcolor="#fafafa">
+   <tbody bgcolor=#7FFFD4>
         <tr>
             <td>flex-basis</td>
             <td colspan="2">項目初始大小(寬)</td>
