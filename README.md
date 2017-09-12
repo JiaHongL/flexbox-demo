@@ -77,8 +77,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>display</td>
-      <td></td>
-      <td></td>
+      <td colspan="2"></td>
    </tr>
    <tr>
       <td></td>
@@ -92,8 +91,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>flex-direction</td>
-      <td>容器項目 排列方向</td>
-      <td></td>
+      <td colspan="2">容器項目 排列方向</td>
    </tr>
    <tr>
       <td></td>
@@ -117,8 +115,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>flex-wrap</td>
-      <td>容器項目 換行方式</td>
-      <td></td>
+      <td colspan="2">容器項目 換行方式</td>
    </tr>
    <tr>
       <td></td>
@@ -137,8 +134,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>justify-content</td>
-      <td>容器項目 主軸(main-axis)對齊方式</td>
-      <td></td>
+      <td colspan="2">容器項目 主軸(main-axis)對齊方式</td>
    </tr>
    <tr>
       <td></td>
@@ -167,8 +163,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>align-items</td>
-      <td>容器項目 交錯軸(cross-axis)對齊方式</td>
-      <td></td>
+      <td colspan="2">容器項目 交錯軸(cross-axis)對齊方式</td>
    </tr>
    <tr>
       <td></td>
@@ -197,8 +192,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>align-content</td>
-      <td>當有多行時.以行為單位的交錯軸(cross-axis)對齊方式</td>
-      <td></td>
+      <td colspan="2">當有多行時.以行為單位的交錯軸(cross-axis)對齊方式</td>
    </tr>
    <tr>
       <td></td>
@@ -244,18 +238,16 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 <table>
    <tr>
       <td>屬性名稱</td>
-      <td>說明</td>
-      <td></td>
+      <td colspan="2">說明</td>
    </tr>
    <tr>
-      <td>參數</td>
       <td></td>
+      <td>參數</td>
       <td>功能</td>
    </tr>
    <tr>
       <td>flex-basis</td>
-      <td>項目初始大小(寬)</td>
-      <td></td>
+      <td colspan="2">項目初始大小(寬)</td>
    </tr>
    <tr>
       <td></td>
@@ -269,8 +261,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>flex-grow</td>
-      <td>項目增長比例</td>
-      <td></td>
+      <td colspan="2">項目增長比例</td>
    </tr>
    <tr>
       <td></td>
@@ -284,8 +275,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>flex-shrink</td>
-      <td>項目壓縮比例</td>
-      <td></td>
+      <td colspan="2">項目壓縮比例</td>
    </tr>
    <tr>
       <td></td>
@@ -309,8 +299,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>align-self</td>
-      <td>項目本身 交叉軸對齊方式(覆蓋容器align-items的設定)</td>
-      <td></td>
+      <td colspan="2">項目本身 交叉軸對齊方式(覆蓋容器align-items的設定)</td>
    </tr>
    <tr>
       <td></td>
