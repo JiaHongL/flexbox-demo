@@ -68,12 +68,11 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 <table>
    <tr>
       <td>屬性名稱</td>
-      <td>說明</td>
-      <td></td>
+      <td colspan="2">說明</td>
    </tr>
    <tr>
-      <td>參數</td>
       <td></td>
+      <td>參數</td>
       <td>功能</td>
    </tr>
    <tr>
