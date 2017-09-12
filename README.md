@@ -114,25 +114,103 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | :------| :------|
 |  flex-flow| grow + shrink + basis|
 
-|   屬性  |   參數  | 功能  |
-| :------| :------|:------|
-|  flex-basis   | 初始大小(寬) |
-|               | auto 或 0 (默認值) |項目原始大小|
-|               |  元素寬度單位   | 如：%、em、rem、px |
-|  flex-grow    | 增長比例 |
-|               |  數字(默認值:0) | 依照數字比例彈性增長 |
-|               | 0     |不做彈性增長 |
-|  flex-shrink  | 壓縮比例 |
-|               | 數字 (默認值:1) |依照數字比例彈性壓縮 |
-|               | 0     |不做彈性壓縮 |
-|  order        | 項目排列順序 |
-|               | 數字(默認值:0)  | 數字越小排越前面 |
-|  align-self   |項目本身 交叉軸對齊方式(覆蓋容器align-items的設定) |
-|               | flex-start   |往起始邊界對齊 |
-|               | center |往中間對齊 |
-|               | flex-end |往結束邊界對齊 |
-|               | baseline |每個項目基準線對齊 |
-|               | stretch (默認值) |將項目高度撐開.與容器相同高度 |
+<table>
+   <tr>
+      <td>屬性名稱</td>
+      <td>說明</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>參數</td>
+      <td></td>
+      <td>功能</td>
+   </tr>
+   <tr>
+      <td>flex-basis</td>
+      <td>項目初始大小(寬)</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>auto 或 0 (默認值)</td>
+      <td>項目原始大小</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>元素寬度單位</td>
+      <td>如：%、em、rem、px</td>
+   </tr>
+   <tr>
+      <td>flex-grow</td>
+      <td>項目增長比例</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>數字(默認值:0)</td>
+      <td>依照數字比例彈性增長</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>0</td>
+      <td>不做彈性增長</td>
+   </tr>
+   <tr>
+      <td>flex-shrink</td>
+      <td>項目壓縮比例</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>數字 (默認值:1)</td>
+      <td>依照數字比例彈性壓縮</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>0</td>
+      <td>不做彈性壓縮</td>
+   </tr>
+   <tr>
+      <td>order</td>
+      <td>項目排列順序</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>數字(默認值:0)</td>
+      <td>數字越小排越前面</td>
+   </tr>
+   <tr>
+      <td>align-self</td>
+      <td>項目本身 交叉軸對齊方式(覆蓋容器align-items的設定)</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-start</td>
+      <td>往起始邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>center</td>
+      <td>往中間對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-end</td>
+      <td>往結束邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>baseline</td>
+      <td>每個項目基準線對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>stretch (默認值)將項目高度撐開.與容器相同高度</td>
+      <td></td>
+   </tr>
+</table>
 
 |   合併屬性  |   參數  | 簡化  | 說明  |
 | :------| :------|:------|:------|
