@@ -65,40 +65,168 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | :------| :------|
 |  flex-flow| direction + wrap|
 
-|   屬性  |   參數  | 功能  |
-| :------| :------|:------|
-|  display | flex   |使用flex佈局 |
-|          | inline-flex |使用flex佈局 |
-| flex-direction | 容器項目 排列方向|
-|          | row (默認值)  |從左到右排列項目|
-|          | row-reverse |從右到左排列項目 |
-|          | column |從上到下排列項目 |
-|          | column-reverse |從下到上排列項目 |
-| flex-wrap| 容器項目 換行方式|
-|          | nowrap (默認值)  |不換行 |
-|          | wrap |換行 多餘項目排在下一行|
-|          | wrap-reverse |換行 多餘項目排在上一行|
-| justify-content| 容器項目 主軸(main-axis)對齊方式 |
-|          | flex-start (默認值) |往起始邊界對齊 |
-|          | center |往中間對齊 |
-|          | flex-end |往結束邊界對齊 |
-|          | space-between |第一項目靠左.最後項目靠右.其餘空白平均分配剩下項目左右兩側|
-|          | space-around | 將空白平均分配每個項目左右兩側 |
-| align-items| 容器項目 交錯軸(cross-axis)對齊方式 |
-|          | flex-start   |往起始邊界對齊 |
-|          | center |往中間對齊 |
-|          | flex-end |往結束邊界對齊 |
-|          | baseline |每個項目基準線對齊 |
-|          | stretch (默認值) |將項目高度撐開.與容器相同高度 |
-| align-content | 當有多行時.以行為單位的交錯軸(cross-axis)對齊方式 |
-|          | flex-start   |往起始邊界對齊 |
-|          | center |往中間對齊 |
-|          | flex-end |往結束邊界對齊 |
-|          | space-between |第一行靠左.最後行靠右.其餘空白平均分配剩下每行左右兩側 |
-|          | space-around |將空白平均分配每個行左右兩側 |
-|          | stretch (默認值)|將每行高度撐開.與容器相同高度 |
-
-
+<table>
+   <tr>
+      <td>屬性名稱</td>
+      <td>說明</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>參數</td>
+      <td></td>
+      <td>功能</td>
+   </tr>
+   <tr>
+      <td>display</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex</td>
+      <td>使用flex佈局</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>inline-flex</td>
+      <td>使用flex佈局</td>
+   </tr>
+   <tr>
+      <td>flex-direction</td>
+      <td>容器項目 排列方向</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>row (默認值)</td>
+      <td>從左到右排列項目</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>row-reverse</td>
+      <td>從右到左排列項目</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>column</td>
+      <td>從上到下排列項目</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>column-reverse</td>
+      <td>從下到上排列項目</td>
+   </tr>
+   <tr>
+      <td>flex-wrap</td>
+      <td>容器項目 換行方式</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>nowrap (默認值)</td>
+      <td>不換行</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>wrap</td>
+      <td>換行 多餘項目排在下一行</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>wrap-reverse</td>
+      <td>換行 多餘項目排在上一行</td>
+   </tr>
+   <tr>
+      <td>justify-content</td>
+      <td>容器項目 主軸(main-axis)對齊方式</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-start (默認值)</td>
+      <td>往起始邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>center</td>
+      <td>往中間對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-end</td>
+      <td>往結束邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>space-between</td>
+      <td>第一項目靠左.最後項目靠右.其餘空白平均分配剩下項目左右兩側</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>space-around</td>
+      <td>將空白平均分配每個項目左右兩側</td>
+   </tr>
+   <tr>
+      <td>align-items</td>
+      <td>容器項目 交錯軸(cross-axis)對齊方式</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-start</td>
+      <td>往起始邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>center</td>
+      <td>往中間對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-end</td>
+      <td>往結束邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>baseline</td>
+      <td>每個項目基準線對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>stretch (默認值)</td>
+      <td>將項目高度撐開.與容器相同高度</td>
+   </tr>
+   <tr>
+      <td>align-content</td>
+      <td>當有多行時.以行為單位的交錯軸(cross-axis)對齊方式</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-start</td>
+      <td>往起始邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>center</td>
+      <td>往中間對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>flex-end</td>
+      <td>往結束邊界對齊</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>space-between</td>
+      <td>第一行靠左.最後行靠右.其餘空白平均分配剩下每行左右兩側</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>stretch (默認值)</td>
+      <td>將每行高度撐開.與容器相同高度</td>
+   </tr>
+</table>
 
 ## 四、項目相關屬性 (item)
 
