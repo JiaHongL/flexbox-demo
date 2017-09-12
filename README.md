@@ -10,18 +10,16 @@
 
 ### I.flexbox：排列方式分為四種(加上reverse為相反方向)
 
-- row：從上到下.
-- row-reverse：從下到上.
-- column：從左到右.
-- column-reverse：從右到左.
+- row：從左到右.
+- row-reverse：從右到左.
+- column：從上到下.
+- column-reverse：從下到上.
 
 ### II.理解排列方式與主軸和交叉軸的關係
 1.row 圖示 (排列方向為從左到右)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 
 PS：排列方式決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
-
-詞彙解釋
 
 - main-axis：主軸 (紅色箭頭)
 - main-start：主軸-起點邊界
@@ -32,16 +30,24 @@ PS：排列方式決定主軸(main-axis)的方向，另外與主軸垂直的稱�
 - cross-end：交叉軸-結束邊界
 - cross-size：交叉軸大小
 
-2.row-reverse 圖示 (排列方向為從右到到)
+</br>
+
+2.row-reverse 圖示 (排列方向為從右到左)
 ![alt text](src/assets/images/row-reverse.jpg "選擇性的標題")  
 PS:其實就是主軸方向翻轉，而交叉軸的方向不變.
+
+</br>
 
 3.column 圖示 (排列方向為從上到下)  
 <img src="src/assets/images/column.jpg" width="300" height="400">  
 PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上到下.
 
+</br>
+
 4.column-reverse 圖示 (排列方向為從下到上)  
 <img src="src/assets/images/column-reverse.jpg" width="300" height="400">
+
+</br>
 
 |   排列方式  |  主軸方向  |   交叉軸方向  |
 | :------| :------|:------|
@@ -55,11 +61,11 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 |   屬性  |   作用  |
 | :------| :------|
 |  display | 使用flex佈局 |
-|  flex-direction | 容器項目 排列方向 |
-|  flex-wrap | 容器項目 換行方式 |
-|  justify-content | 容器項目 主軸對齊方式 |
-|  align-items | 容器項目 交叉軸對齊方式(單行) |
-|  align-content | 容器項目 交叉軸對齊方式(多行) |
+|  flex-direction | 項目 排列方向 |
+|  flex-wrap | 項目 換行方式 |
+|  justify-content | 項目 主軸對齊方式 |
+|  align-items | 項目 交叉軸對齊方式(單行) |
+|  align-content | 項目 交叉軸對齊方式(多行) |
 
 |   屬性合併  |  作用  |
 | :------| :------|
