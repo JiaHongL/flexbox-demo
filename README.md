@@ -6,7 +6,10 @@
 - column(欄)(方向為上到下)
 - row(列)(方向為左到右)
 
-## 二、排列方式&主軸&交叉軸 概念
+## 二、容器與項目(container && item) 認識
+![alt text](src/assets/images/tip.png "選擇性的標題")
+
+## 三、排列方式&主軸&交叉軸 概念
 
 ### I.flexbox：排列方式分為四種(加上reverse為相反方向)
 
@@ -19,7 +22,7 @@
 1.row 圖示 (排列方向為從左到右)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 
-PS：排列方式決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
+PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
 
 - main-axis：主軸 (紅色箭頭)
 - main-start：主軸-起點邊界
@@ -56,11 +59,11 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | column | 從上到下 | 從左到右|
 | column-reverse | 從下到上 | 從左到右|
 
-## 三、容器相關屬性 (container)
+## 四、容器相關屬性 (container)
 
 |   屬性  |   作用  |
 | :------| :------|
-|  display | 使用flex佈局 |
+|  display | 設定為flex佈局 |
 |  flex-direction | 項目 排列方向 |
 |  flex-wrap | 項目 換行方式 |
 |  justify-content | 項目 主軸對齊方式 |
@@ -83,17 +86,17 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>display</td>
-      <td colspan="2"></td>
+      <td colspan="2">設定為flex佈局</td>
    </tr>
    <tr>
       <td></td>
       <td>flex</td>
-      <td>使用flex佈局</td>
+      <td>被設定元素會有block的特性</td>
    </tr>
    <tr>
       <td></td>
       <td>inline-flex</td>
-      <td>使用flex佈局</td>
+      <td>被設定元素會有inline-block的特性</td>
    </tr>
    <tr>
       <td>flex-direction</td>
@@ -227,7 +230,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
 </table>
 
-## 四、項目相關屬性 (item)
+## 五、項目相關屬性 (item)
 
 |   屬性  |   作用  |
 | :------| :------|
@@ -338,9 +341,37 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tbody>
 </table>
 
-|   合併屬性  |   參數  | 簡化  | 說明  |
-| :------| :------|:------|:------|
-| flex       | flex-grow + flex-shrink + flex-basis |
-|            | 0 1 auto | flex:initial|flex項目默認設定|
-|            | 0 0 auto| flex:none;|固定寬度.寬度為項目原始寬度|
-|            | 1 1 auto| flex:auto;|自動彈性寬度|
+<table>
+    <thead>
+        <tr >
+            <td>合併屬性</td>
+            <td>參數</td>
+            <td >簡化</td>
+            <td >說明</td>
+        </tr>
+   </thead>
+    <tbody>
+        <tr>
+            <td>flex</td>
+            <td colspan="3">flex-grow + flex-shrink + flex-basis</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>0 1 auto </td>
+            <td>flex:initial</td>
+            <td>flex項目默認設定</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>0 0 auto</td>
+            <td> flex:none;</td>
+            <td>固定寬度.寬度為項目原始寬度</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1 1 auto</td>
+            <td>flex:auto;</td>
+            <td>自動彈性寬度</td>
+        </tr>
+    </tbody>
+<table>
