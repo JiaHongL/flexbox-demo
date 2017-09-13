@@ -6,6 +6,8 @@
 - column(欄)(方向為上到下)
 - row(列)(方向為左到右)
 
+</br>
+
 ## 二、容器與項目(container && item) 認識
 ![alt text](src/assets/images/tip.png "選擇性的標題")
 
@@ -58,6 +60,8 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | row-reverse | 從右到左 | 從上到下|
 | column | 從上到下 | 從左到右|
 | column-reverse | 從下到上 | 從左到右|
+
+</br>
 
 ## 四、容器相關屬性 (container)
 
@@ -229,6 +233,8 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
       <td>將每行高度撐開.與容器相同高度</td>
    </tr>
 </table>
+
+</br>
 
 ## 五、項目相關屬性 (item)
 
