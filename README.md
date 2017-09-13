@@ -61,6 +61,8 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | column | 從上到下 | 從左到右|
 | column-reverse | 從下到上 | 從左到右|
 
+> ㄧ ~ 三 介紹的都是在講flexbox的相關概念，再來就是藉由flexbox語法上的實作，來理解屬性上的設定與應用.
+
 </br>
 
 ## 四、容器相關屬性 (container)
