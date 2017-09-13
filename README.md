@@ -343,8 +343,8 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
         </tr>
         <tr>
             <td></td>
-            <td>stretch (默認值)將項目高度撐開.與容器相同高度</td>
-            <td></td>
+            <td>stretch (默認值)</td>
+            <td>將項目高度撐開.與容器相同高度</td>
         </tr>
    </tbody>
 </table>
