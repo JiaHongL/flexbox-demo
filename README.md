@@ -356,30 +356,35 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td>參數</td>
             <td >簡化</td>
             <td >說明</td>
+            <td >範例</td>
         </tr>
    </thead>
     <tbody>
         <tr>
             <td>flex</td>
             <td colspan="3">flex-grow + flex-shrink + flex-basis</td>
+            <td> <a target="_blank" href="https://jiahongl.github.io/flexbox-demo/dist/#example13">flex範例</a></td>
         </tr>
         <tr>
             <td></td>
             <td>0 1 auto </td>
             <td>flex:initial</td>
             <td>flex項目默認設定</td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>0 0 auto</td>
             <td> flex:none;</td>
             <td>固定main-size.為項目原始的main-size</td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>1 1 auto</td>
             <td>flex:auto;</td>
             <td>main-size自動彈性</td>
+            <td></td>
         </tr>
     </tbody>
 <table>
