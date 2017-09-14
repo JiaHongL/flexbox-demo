@@ -69,7 +69,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 
 |   屬性  |   作用  | 範例  |
 | :------| :------|:------|
-|  display | 設定為flex佈局 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example" target="_blank">demo</a>  |
+|  display | 設定為flexbox佈局 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example" target="_blank">demo</a>  |
 |  flex-direction | 項目 排列方向 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example2" target="_blank">demo</a>  |
 |  flex-wrap | 項目 換行方式 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example3" target="_blank">demo</a>  |
 |  justify-content | 項目 主軸對齊方式 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example4" target="_blank">demo</a>  |
@@ -92,7 +92,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    </tr>
    <tr>
       <td>display</td>
-      <td colspan="2">設定為flex佈局</td>
+      <td colspan="2">設定為flexbox佈局</td>
    </tr>
    <tr>
       <td></td>
