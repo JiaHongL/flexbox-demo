@@ -3,7 +3,7 @@
 .wrapper {
     display: flex;
     flex-flow: row wrap;
-    padding: 50px;
+    padding: 50px 50px 0px 50px;
     &>.item {
         flex: 0 0 100%;
     }
@@ -11,7 +11,7 @@
 
 @include mq($max-width: 1000px) {
     .wrapper {
-        padding: 20px;
+        padding: 20px 20px 0px 20px;
     }
 }
 
@@ -90,4 +90,9 @@
             flex: 0 0 100%;
         }
     }
+}
+
+.footer-c{
+    padding:10px;
+    text-align: center;
 }

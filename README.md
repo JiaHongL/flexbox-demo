@@ -29,11 +29,11 @@ PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(ma
 - main-axis：主軸 (紅色箭頭)
 - main-start：主軸-起點邊界
 - main-end：主軸-結束邊界
-- main-size：主軸大小
+- main-size：項目與容器的主軸大小
 - cross-axis：交叉軸 (黃色箭頭)
 - cross-start：交叉軸-起點邊界
 - cross-end：交叉軸-結束邊界
-- cross-size：交叉軸大小
+- cross-size：項目與容器的交叉軸大小
 
 </br>
 
@@ -203,7 +203,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tr>
       <td></td>
       <td>stretch (默認值)</td>
-      <td>將項目高度撐開.與容器相同高度</td>
+      <td>將項目的cross-size撐開,填滿與容器相同cross-size.</td>
    </tr>
    <tr>
       <td>align-content</td>
@@ -232,7 +232,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tr>
       <td></td>
       <td>stretch (默認值)</td>
-      <td>將每行高度撐開.與容器相同高度</td>
+      <td>將每行的cross-size撐開.填滿與容器相同cross-size</td>
    </tr>
 </table>
 
@@ -242,9 +242,9 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 
 |   屬性  |   作用  |
 | :------| :------|
-|  flex-basis | 初始大小 |
-|  flex-grow | 項目寬度增長比例 |
-|  flex-shrink | 項目寬度壓縮比例 |
+|  flex-basis | 初始大小 (main-size) |
+|  flex-grow | 項目增長比例. |
+|  flex-shrink | 項目壓縮比例. |
 |  order | 項目排列順序 |
 |  align-self|項目本身 交叉軸對齊方式(覆蓋容器align-items的設定) |
 
@@ -267,7 +267,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tbody>
         <tr>
             <td>flex-basis</td>
-            <td colspan="2">項目初始大小(寬)</td>
+            <td colspan="2">項目初始大小(main-size)</td>
         </tr>
         <tr>
             <td></td>
@@ -276,7 +276,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
         </tr>
         <tr>
             <td></td>
-            <td>元素寬度單位</td>
+            <td>元素單位</td>
             <td>如：%、em、rem、px</td>
         </tr>
         <tr>
@@ -344,7 +344,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
         <tr>
             <td></td>
             <td>stretch (默認值)</td>
-            <td>將項目高度撐開.與容器相同高度</td>
+            <td>將項目的cross-size撐開.填滿與容器相同cross-size</td>
         </tr>
    </tbody>
 </table>
@@ -373,13 +373,13 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td></td>
             <td>0 0 auto</td>
             <td> flex:none;</td>
-            <td>固定寬度.寬度為項目原始寬度</td>
+            <td>固定main-size.為項目原始的main-size</td>
         </tr>
         <tr>
             <td></td>
             <td>1 1 auto</td>
             <td>flex:auto;</td>
-            <td>自動彈性寬度</td>
+            <td>main-size自動彈性</td>
         </tr>
     </tbody>
 <table>

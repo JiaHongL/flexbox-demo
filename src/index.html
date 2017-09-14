@@ -31,6 +31,10 @@
       <li><a href="#example9" onclick="goExample('example9')">flex-shrink</a></li>
       <li><a href="#example10" onclick="goExample('example10')">order</a></li>
       <li><a href="#example11" onclick="goExample('example11')">align-self</a></li>
+      <li><a href="#example12" onclick="goExample('example12')">flex-flow</a></li>
+      <li><a href="#example13" onclick="goExample('example13')">flex</a></li>
+      <li><a href="#example14" onclick="goExample('example14')">範例一</a></li>
+      <li><a href="#example15" onclick="goExample('example15')">範例二</a></li>
     </ul>
   </div>
   <div class="wrapper">
@@ -261,7 +265,7 @@
                   border: 1px solid black;
 
                   .item {
-                      flex:none; //默認壓縮寬度,先設定不具彈性.
+                      flex:none; //默認壓縮main-size,先設定不具彈性.
                       width: 50px;
                       height: 50px;
                       border: 1px solid black;
@@ -540,7 +544,7 @@
             5.align-items(cross-axis) 示範 , html結構：1個div(.container)包3個div(.item)
           </div>
           <div class="example-item-view step">
-            <span class="title">默認值：stretch：但有設定高度時會失效 . </br> (ps：cross-axis方向 ＝> 從上到下)</span>
+            <span class="title">默認值：stretch：當項目有設定main-size時會失效. </br> (ps：cross-axis方向 ＝> 從上到下)</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -675,7 +679,7 @@
               </pre>
           </div>
           <div class="example-item-view step6">
-            <span class="title">stretch：將項目高度撐開.與容器相同高度</span>
+            <span class="title">stretch：將項目的cross-size撐開.填滿與容器相同cross-size</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -709,7 +713,7 @@
             6.align-content(多行的cross-axis) 示範 , html結構：1個div(.container)包6個div(.item)
           </div>
           <div class="example-item-view step">
-            <span class="title">默認值：stretch：但有設定高度時會失效 . </br> (ps：main-axis方向 = row => 從左到右)</span>
+            <span class="title">默認值：stretch：當項目有設定main-size時會失效 . </br> (ps：main-axis方向 = row => 從左到右)</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -935,7 +939,7 @@
                   </pre>
           </div>
           <div class="example-item-view step2">
-            <span class="title">設定基本寬度為100px;</span>
+            <span class="title">設定項目的main-size為100px;</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -962,7 +966,7 @@
                     </pre>
           </div>
           <div class="example-item-view step3">
-            <span class="title">設定基本寬度為80%;</span>
+            <span class="title">設定項目的main-size為80%;</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1353,14 +1357,177 @@
               </pre>
           </div>
         </div>
-        <!-- example10 -->
-        <div class="example-item example20">
+
+        <!-- 12.flex-flow -->
+        <div class="example-item example12">
           <div class="example-item-title">
-            123
+            11.flex-flow 示範 , html結構：1個div(.container)包6個div(.item)
+          </div>
+          <div class="example-item-view step">
+            <span class="title">一次設定direction、wrap.</span>
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+              <div class="item">5</div>
+              <div class="item">6</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                .container {
+                    display: flex;
+                    flex-flow: row-reverse wrap;
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid black;
+
+                    .item {
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid black;
+                        box-sizing: border-box;
+                    }
+                }
+                </pre>
+          </div>
+        </div>
+
+        <!-- 13.flex -->
+        <div class="example-item example13">
+          <div class="example-item-title">
+            11.flex 示範 , html結構：1個div(.container)包6個div(.item)
+          </div>
+          <div class="example-item-view step">
+            <span class="title">一次設定grow、shrink、basis.</span>
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+              <div class="item">5</div>
+              <div class="item">6</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                .container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid black;
+
+                    .item {
+                        flex: 0 0 50%;
+                        height: 50px;
+                        border: 1px solid black;
+                        box-sizing: border-box;
+                    }
+              }
+            </pre>
+          </div>
+          <div class="example-item-view step2">
+            <span class="title">flex:initial; = flex:0 1 auto;</span>
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+              <div class="item">5</div>
+              <div class="item">6</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                  .container {
+                      display: flex;
+                      flex-flow: row nowrap;
+                      width: 200px;
+                      height: 200px;
+                      border: 1px solid black;
+
+                      .item {
+                          flex:initial;
+                          width:50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          box-sizing: border-box;
+                      }
+                }
+              </pre>
+          </div>
+          <div class="example-item-view step3">
+            <span class="title">flex:none; = flex:0 0 auto;</span>
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+              <div class="item">5</div>
+              <div class="item">6</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                    .container {
+                        display: flex;
+                        flex-flow: row nowrap;v
+                        width: 200px;
+                        height: 200px;
+                        border: 1px solid black;
+
+                        .item {
+                            flex:none;
+                            width:50px;
+                            height: 50px;
+                            border: 1px solid black;
+                            box-sizing: border-box;
+                        }
+                  }
+                </pre>
+          </div>
+          <div class="example-item-view step4">
+            <span class="title">flex:auto; = flex:1 1 auto;</span>
+            <div class="container">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+              <div class="item">4</div>
+              <div class="item">5</div>
+              <div class="item">6</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                      .container {
+                          display: flex;
+                          flex-flow: row nowrap;
+                          width: 200px;
+                          height: 200px;
+                          border: 1px solid black;
+
+                          .item {
+                              flex:auto;
+                              width:50px;
+                              height: 50px;
+                              border: 1px solid black;
+                              box-sizing: border-box;
+                          }
+                    }
+                  </pre>
+          </div>
+        </div>
+
+        <!-- example14 -->
+        <div class="example-item example14">
+          <div class="example-item-title">
+            範例一
           </div>
           <!-- step0 -->
           <div class="example-item-view now">
-            <span class="title">-</span>
+            <span class="title">原始排列</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1368,7 +1535,7 @@
             </div>
           </div>
           <div class="example-item-view want">
-            <span class="title">-</span>
+            <span class="title">期望排列</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1376,8 +1543,8 @@
             </div>
           </div>
           <!-- step1 -->
-          <div class="example-item-view step1">
-            <span class="title">Step1</span>
+          <div class="example-item-view step">
+            <span class="title">原始樣式</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1386,11 +1553,23 @@
           </div>
           <div class="example-item-code">
             <pre class="code">
-                </pre>
+              .container {
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid black;
+
+                  .item {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid black;
+                    box-sizing: border-box;
+                }
+              }
+            </pre>
           </div>
           <!-- step2 -->
           <div class="example-item-view step2">
-            <span class="title">Step2</span>
+            <span class="title">設定排列方式為row</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1399,11 +1578,25 @@
           </div>
           <div class="example-item-code">
             <pre class="code">
-                </pre>
+                .container {
+                  display: flex;
+                  flex-flow: row;
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid black;
+
+                  .item {
+                      width: 50px;
+                      height: 50px;
+                      border: 1px solid black;
+                      box-sizing: border-box;
+                  }
+              }
+            </pre>
           </div>
           <!-- step3 -->
           <div class="example-item-view step3">
-            <span class="title">Step3</span>
+            <span class="title">設定主軸對齊方式為置中</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1412,11 +1605,26 @@
           </div>
           <div class="example-item-code">
             <pre class="code">
-                </pre>
+                .container {
+                  display: flex;
+                  flex-flow: row;
+                  justify-content: center;
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid black;
+
+                  .item {
+                      width: 50px;
+                      height: 50px;
+                      border: 1px solid black;
+                      box-sizing: border-box;
+                  }
+              }
+            </pre>
           </div>
           <!-- step4 -->
           <div class="example-item-view step4">
-            <span class="title">Step4</span>
+            <span class="title">設定交叉軸對齊方式為置中</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1425,11 +1633,27 @@
           </div>
           <div class="example-item-code">
             <pre class="code">
-                </pre>
+                .container {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid black;
+
+                    .item {
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid black;
+                        box-sizing: border-box;
+                    }
+                }
+            </pre>
           </div>
           <!-- step5 -->
           <div class="example-item-view step5">
-            <span class="title">Step5</span>
+            <span class="title">設定主軸對齊方式改為space-around</span>
             <div class="container">
               <div class="item">1</div>
               <div class="item">2</div>
@@ -1438,17 +1662,219 @@
           </div>
           <div class="example-item-code">
             <pre class="code">
-                </pre>
+                .container {
+                  display: flex;
+                  flex-flow: row;
+                  justify-content: space-around;
+                  align-items: center;
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid black;
+
+                  .item {
+                      width: 50px;
+                      height: 50px;
+                      border: 1px solid black;
+                      box-sizing: border-box;
+                  }
+              }
+            </pre>
+          </div>
+        </div>
+
+        <!-- example15 -->
+        <div class="example-item example15">
+          <div class="example-item-title">
+            範例二
+          </div>
+          <!-- step0 -->
+          <div class="example-item-view want">
+            <span class="title">期望排列</span>
+            <div class="container">
+              <div class="header">header</div>
+              <div class="main">
+                <div class="siderbar">siderbar</div>
+                <div class="content">content</div>
+              </div>
+              <div class="footer">footer</div>
+            </div>
+          </div>
+          <div class="example-item-view now">
+            <span class="title">html結構</span> &lt;div class="container"&gt; </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header"&gt;header&lt;/div&gt;</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="main"&gt; </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="siderbar"&gt;siderbar&lt;/div&gt;</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;content&lt;/div&gt;</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="footer"&gt;footer&lt;/div&gt;</br>
+            </br>
+            &lt;/div&gt;
+          </div>
+          <div class="example-item-view step">
+            <span class="title">原始排列(橘色為main範圍)</span>
+            <div class="container">
+              <div class="header">header</div>
+              <div class="main">
+                <div class="siderbar">siderbar</div>
+                <div class="content">content</div>
+              </div>
+              <div class="footer">footer</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                  .container{
+                      width: 300px;
+                      height: 300px;
+                      border: 1px solid #160606;
+
+                      .header{
+                          background:greenyellow;
+                      }
+
+                      .main{
+                          background:orange;
+
+                          .siderbar{
+                              //background:orangered;
+                          }
+
+                          .content{
+                              //background:plum;
+                          }
+                      }
+
+                      .footer{
+                          background:gray;
+                      }
+                  } 
+              </pre>
+          </div>
+          <div class="example-item-view step2" style="padding-top:110px;">
+            <span class="title">
+              先設定container 與 header、main、footer 的排列</br>
+              &nbsp;1.container：設定為column排列.</br>
+              &nbsp;2.header：main-size設為50px;</br>
+              &nbsp;3.main：設為自動彈性,所以項目的main-size自動增長.</br>
+              &nbsp;4.footer：main-size設為50px;</br>
+              &nbsp;(align-items默認stretch,所以項目的cross-size自動撐滿.)</br>
+            </span>
+            <div class="container">
+              <div class="header">header</div>
+              <div class="main">
+                <div class="siderbar">siderbar</div>
+                <div class="content">content</div>
+              </div>
+              <div class="footer">footer</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                .container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid #160606;
+
+                    .header{
+                        flex: 0 0 50px;
+                        background:greenyellow;
+                    }
+
+                    .main{
+                        flex: auto;
+                        background:orange;
+
+                        .siderbar{
+                            // background:orangered;
+                        }
+                        
+                        .content{
+                            // background:plum;
+                        }
+                    }
+
+                    .footer{
+                        flex: 0 0 50px;
+                        background:gray;
+                    }
+              } 
+            </pre>
+          </div>
+          <div class="example-item-view step3" style="padding-top:110px;">
+            <span class="title">
+                先設定main 與 siderbar、content 的排列</br>
+                &nbsp;1.main：設定為row排列.</br>
+                &nbsp;2.siderbar：main-size設為70px;</br>
+                &nbsp;3.content：設為自動彈性,所以項目的main-size自動增長.</br>
+                &nbsp;(align-items默認stretch,所以項目的cross-size自動撐滿.)</br>
+                &nbsp;ps:記得 main-size 不要跟 css height/width 搞混了,指的是main-axis的方向.</br>
+              </span>
+            <div class="container">
+              <div class="header">header</div>
+              <div class="main">
+                <div class="siderbar">siderbar</div>
+                <div class="content">content</div>
+              </div>
+              <div class="footer">footer</div>
+            </div>
+          </div>
+          <div class="example-item-code">
+            <pre class="code">
+                  .container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 300px;
+                    height: 300px;
+                    border: 1px solid #160606;
+
+                    .header{
+                        flex: 0 0 50px;
+                        background:greenyellow;
+                    }
+
+                    .main{
+                        flex:auto;
+                        background:orange;
+                        display: flex;
+                        flex-flow: row nowrap;
+
+                        .siderbar{
+                            flex: 0 0 70px;
+                            background:orangered;
+                        }
+
+                        .content{
+                            flex: auto;
+                            background:plum;
+                        }
+                    }
+
+                    .footer{
+                        flex: 0 0 50px;
+                        background:gray;
+                    }
+                } 
+              </pre>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-    <!-- all plugins -->
-    <script src='plugins/jquery.min.js'></script>
-    <!-- all Js -->
-    <script src='js/min/app.min.js'></script>
+  <div class="footer-c">
+    Copyright © 2017 by JiaHongL
+  </div>
+  <!-- all plugins -->
+  <script src='plugins/jquery.min.js'></script>
+  <!-- all Js -->
+  <script src='js/min/app.min.js'></script>
 </body>
 
 </html>
