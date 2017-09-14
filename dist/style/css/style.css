@@ -18,10 +18,10 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding: 50px; }
+.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding: 50px 50px 0px 50px; }
 .wrapper > .item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
 
-@media only screen and (max-width: 1000px) { .wrapper { padding: 20px; } }
+@media only screen and (max-width: 1000px) { .wrapper { padding: 20px 20px 0px 20px; } }
 .example-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding-bottom: 1px; padding-left: 1px; }
 .example-container .example-item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; margin-bottom: 25px; }
 .example-container .example-item .example-item-title { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; padding: 5px; font-weight: 500; font-size: 18px; }
@@ -34,14 +34,17 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 @media only screen and (max-width: 1000px) { .example-container .example-item-view { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
   .example-container .example-item-code { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; } }
+.footer-c { padding: 10px; text-align: center; }
+
 body, html { font-family: "Microsoft JhengHei", "Segoe UI", sans-serif; font-size: 14px; letter-spacing: 1px; }
 
-.rightmenu { position: fixed; top: 20%; right: 0px; z-index: 3000; text-align: center; overflow: hidden; opacity: 0.8; }
+.rightmenu { position: fixed; top: 10%; right: 0px; z-index: 3000; text-align: center; overflow: hidden; opacity: 0.8; }
 .rightmenu ul { list-style: none; margin: 0px; padding: 0px; border: 1px solid white; border-left: none; }
 .rightmenu ul li { color: white; border-radius: 5px; -webkit-box-shadow: 0px 0px 5px 0px #565656; box-shadow: 0px 0px 5px 0px #565656; margin: 5px 0; }
 .rightmenu ul li a { border-radius: 5px; color: white; padding: 10px; display: block; background-color: #0F9B98; }
 .rightmenu ul li a:hover { text-decoration: none; background-color: #10b4b6; }
 
+.index { /* 1.display */ /* 2.flex-direction */ /* 3.flex-wrap */ /* 4.justify-content */ /* 5.align-items */ /* 6.align-content */ /* 7.flex-basis */ /* 8.flex-grow  */ /* 9.flex-shrink */ /* 10.order */ /* 11.align-self */ /* 12.flex-flow */ /* 13.flex-flow */ /* 14. */ /* 15. */ }
 .index .example .step .box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100px; height: 50px; border: 1px solid black; background: green; }
 .index .example .step2 .box { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 100px; height: 50px; border: 1px solid black; background: green; }
 .index .example2 .step .container { width: 200px; height: 200px; border: 1px solid black; }
@@ -136,17 +139,47 @@ body, html { font-family: "Microsoft JhengHei", "Segoe UI", sans-serif; font-siz
 .index .example11 .step .container .item4 { -ms-flex-item-align: baseline; align-self: baseline; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 25px; line-height: 50px; }
 .index .example11 .step .container .item5 { -ms-flex-item-align: baseline; align-self: baseline; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .index .example11 .step .container .item6 { -ms-flex-item-align: stretch; align-self: stretch; width: 100px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example20 .now .container { width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .now .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example20 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .want .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example20 .step1 .container { width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .step1 .item { width: 50px; height: 50px; border: 1px solid black; }
-.index .example20 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .step2 .item { width: 50px; height: 50px; border: 1px solid black; }
-.index .example20 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .step3 .item { width: 50px; height: 50px; border: 1px solid black; }
-.index .example20 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .step4 .item { width: 50px; height: 50px; border: 1px solid black; }
-.index .example20 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example20 .step5 .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example12 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-flow: row-reverse wrap; flex-flow: row-reverse wrap; width: 200px; height: 200px; border: 1px solid black; }
+.index .example12 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example13 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; width: 200px; height: 200px; border: 1px solid black; }
+.index .example13 .step .container .item { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example13 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
+.index .example13 .step2 .container .item { -webkit-box-flex: initial; -ms-flex: initial; flex: initial; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example13 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
+.index .example13 .step3 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example13 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
+.index .example13 .step4 .container .item { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .now .container { width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .now .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .want .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .step .container { width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .step2 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .step3 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .step4 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example14 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
+.index .example14 .step5 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.index .example15 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
+.index .example15 .want .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
+.index .example15 .want .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; }
+.index .example15 .want .container .main .siderbar { -webkit-box-flex: 0; -ms-flex: 0 0 70px; flex: 0 0 70px; background: orangered; }
+.index .example15 .want .container .main .content { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: plum; }
+.index .example15 .want .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
+.index .example15 .step .container { width: 300px; height: 300px; border: 1px solid #160606; }
+.index .example15 .step .container .header { background: greenyellow; }
+.index .example15 .step .container .main { background: orange; }
+.index .example15 .step .container .footer { background: gray; }
+.index .example15 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
+.index .example15 .step2 .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
+.index .example15 .step2 .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; }
+.index .example15 .step2 .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
+.index .example15 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
+.index .example15 .step3 .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
+.index .example15 .step3 .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; }
+.index .example15 .step3 .container .main .siderbar { -webkit-box-flex: 0; -ms-flex: 0 0 70px; flex: 0 0 70px; background: orangered; }
+.index .example15 .step3 .container .main .content { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: plum; }
+.index .example15 .step3 .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
