@@ -309,8 +309,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
         </tr>
         <tr>
             <td>order</td>
-            <td>項目排列順序</td>
-            <td></td>
+            <td colspan="2">項目排列順序</td>
         </tr>
         <tr>
             <td></td>
