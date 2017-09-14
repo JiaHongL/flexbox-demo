@@ -1,11 +1,14 @@
 /*
   reset    : 樣式歸零
   layout   : 整體架構
-  module/  : 各模組
-  pages/   : 各頁面
+  theme    : 主題樣式
+  module/  : 各式模組
+  pages/   : 各式頁面
 */
 
 @import "reset";
 @import "layout";
+@import "theme";
+@import "module/rightmenu";
 @import "pages/index";
 

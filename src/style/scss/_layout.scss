@@ -1,7 +1,4 @@
 @import "../scss/_media-queries";
-.index {
-    // background: gray;
-}
 
 .wrapper {
     display: flex;
@@ -27,15 +24,18 @@
         flex: 0 0 100%;
         display: flex;
         flex-flow: row wrap;
-        margin-bottom:10px;
+        margin-bottom:25px;
         .example-item-title{
             flex: 0 0 100%;
+            padding:5px;
+            font-weight:500;
+            font-size:18px;
         }
         .example-item-view {
-            flex: 0 0 50%;
+            flex: 1 0 50%;
             position: relative;
             min-height: 300px;
-            padding: 40px;
+            padding: 50px;
             margin-right: -1px;
             margin-bottom: -1px;
             border: 1px solid black;
@@ -48,7 +48,7 @@
             }
         }
         .example-item-code {
-            flex: 0 0 50%;
+            flex: 1 0 50%;
             position: relative;
             min-height: 300px;
             padding: 20px;

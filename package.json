@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/JiaHongL/flexbox-demo#readme",
   "dependencies": {
+    "jquery": "^3.2.1",
     "sass-mediaqueries": "^1.6.1"
   }
 }

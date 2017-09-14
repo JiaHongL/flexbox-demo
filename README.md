@@ -169,7 +169,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tr>
       <td></td>
       <td>space-between</td>
-      <td>第一項目靠左.最後項目靠右.其餘空白平均分配剩下項目左右兩側</td>
+      <td>第一項目靠起始邊界.最後項目靠終點邊界.其餘空白平均分配剩下項目左右兩側</td>
    </tr>
    <tr>
       <td></td>
@@ -198,7 +198,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tr>
       <td></td>
       <td>baseline</td>
-      <td>每個項目基準線對齊</td>
+      <td>每個項目基線對齊</td>
    </tr>
    <tr>
       <td></td>
@@ -227,7 +227,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
    <tr>
       <td></td>
       <td>space-between</td>
-      <td>第一行靠左.最後行靠右.其餘空白平均分配剩下每行左右兩側</td>
+      <td>第一行靠起始邊界.最後行靠結束邊界.其餘空白平均分配剩下每行左右兩側</td>
    </tr>
    <tr>
       <td></td>
@@ -339,7 +339,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
         <tr>
             <td></td>
             <td>baseline</td>
-            <td>每個項目基準線對齊</td>
+            <td>每個項目基線對齊</td>
         </tr>
         <tr>
             <td></td>
