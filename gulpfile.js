@@ -36,7 +36,7 @@ gulp.task('compass', () => {
 
 // iii. copy npm dependencies  ( web plugins )
 gulp.task('copydependencies:src', () => {
-  return depLinker.linkDependenciesTo('src/assets/plugins');
+  return depLinker.linkDependenciesTo('src/plugins');
 });
 
 // iv. uglify JavaScript (js babel)
@@ -71,8 +71,12 @@ gulp.task('copyfile', () => {
     gulp.src('src/style/css/style.css').pipe(gulp.dest('dist/style/css/'));
     // output assets folder
     fse.copy('src/assets', 'dist/assets')
-      .then(() => console.log('success!'))
+      .then(() => console.log('assets success!'))
       .catch(err => console.error('assets error', err));
+    // output plugins folder
+    fse.copy('src/assets', 'dist/plugins')
+    .then(() => console.log('plugins success!'))
+    .catch(err => console.error('plugins error', err));
   }).catch(err => console.error('remove dist error', err));
 });
 
