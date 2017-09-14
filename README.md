@@ -242,7 +242,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 
 |   屬性  |   作用  | 範例  |
 | :------| :------|:------|
-|  flex-basis | 初始大小 (main-size) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example7" target="_blank">demo</a>  |
+|  flex-basis | 項目初始大小 (main-size) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example7" target="_blank">demo</a>  |
 |  flex-grow | 項目增長比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example8" target="_blank">demo</a>  |
 |  flex-shrink | 項目壓縮比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example9" target="_blank">demo</a>  |
 |  order | 項目排列順序 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example10" target="_blank">demo</a>  |
