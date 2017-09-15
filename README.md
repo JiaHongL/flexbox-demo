@@ -36,6 +36,8 @@
 
 PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
 
+### III.排列方式圖解
+
 1.row 圖示 (排列方向為從左到右)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 <a href="https://www.w3.org/TR/css-flexbox-1/#box-model" target="_blank">圖示來源</a> 
