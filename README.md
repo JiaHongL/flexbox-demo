@@ -21,23 +21,29 @@
 - column-reverse：從下到上.
 
 ### II.理解排列方式與主軸和交叉軸的關係
-1.row 圖示 (排列方向為從左到右)
-![alt text](src/assets/images/row.jpg "選擇性的標題")
 
-PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
+![alt text](src/assets/images/FlexboxModel.jpg "選擇性的標題")
+ <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties" target="_blank">圖片來源 </a>  
 
-- main-axis：主軸 (紅色箭頭)
+- main-axis：主軸 
 - main-start：主軸-起點邊界
 - main-end：主軸-結束邊界
 - main-size：項目與容器的主軸大小
-- cross-axis：交叉軸 (黃色箭頭)
+- cross-axis：交叉軸 
 - cross-start：交叉軸-起點邊界
 - cross-end：交叉軸-結束邊界
 - cross-size：項目與容器的交叉軸大小
 
+PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(main-axis)的方向，另外與主軸垂直的稱為交叉軸(cross-axis).
+
+1.row 圖示 (排列方向為從左到右)
+![alt text](src/assets/images/row.jpg "選擇性的標題")
+<a href="https://www.w3.org/TR/css-flexbox-1/#box-model" target="_blank">圖示來源</a> 
+</br>
 </br>
 
-2.row-reverse 圖示 (排列方向為從右到左)
+2.row-reverse 圖示 (排列方向為從右到左)  
+(以下圖示：紅色箭頭=main-axis、黃色箭頭=main-size)
 ![alt text](src/assets/images/row-reverse.jpg "選擇性的標題")  
 PS:其實就是主軸方向翻轉，而交叉軸的方向不變.
 
@@ -45,7 +51,7 @@ PS:其實就是主軸方向翻轉，而交叉軸的方向不變.
 
 3.column 圖示 (排列方向為從上到下)  
 <img src="src/assets/images/column.jpg" width="300" height="400">  
-PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上到下.
+PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上到下.  
 
 </br>
 
@@ -60,7 +66,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 | row-reverse | 從右到左 | 從上到下|
 | column | 從上到下 | 從左到右|
 | column-reverse | 從下到上 | 從左到右|
-
+ 
 > ㄧ ~ 三 介紹的都是在講flexbox的相關概念，再來就是藉由flexbox語法上的實作，來理解屬性上的設定與應用.
 
 </br>
