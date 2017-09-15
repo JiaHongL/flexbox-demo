@@ -38,14 +38,14 @@ PS：主軸的方向並不是固定的，而是由排列方式來決定主軸(ma
 
 ### III.排列方式圖解
 
-1.row 圖示 (排列方向為從左到右)
+1.row 圖示 (排列方向為從左到右)  
+(以下圖示：紅色箭頭=main-axis、黃色箭頭=main-size)
 ![alt text](src/assets/images/row.jpg "選擇性的標題")
 <a href="https://www.w3.org/TR/css-flexbox-1/#box-model" target="_blank">圖示來源</a> 
 </br>
 </br>
 
 2.row-reverse 圖示 (排列方向為從右到左)  
-(以下圖示：紅色箭頭=main-axis、黃色箭頭=main-size)
 ![alt text](src/assets/images/row-reverse.jpg "選擇性的標題")  
 PS:其實就是主軸方向翻轉，而交叉軸的方向不變.
 
