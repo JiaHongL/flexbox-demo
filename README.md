@@ -375,7 +375,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td></td>
             <td>0 1 auto </td>
             <td>flex:initial</td>
-            <td>main-size會自動壓縮;flex項目默認設定</td>
+            <td>main-size會彈性壓縮;flex項目默認設定</td>
         </tr>
         <tr>
             <td></td>
