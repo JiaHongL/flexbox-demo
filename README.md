@@ -251,11 +251,11 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
 
 |   屬性  |   作用  | 範例  |
 | :------| :------|:------|
-|  flex-basis | 項目初始大小 (main-size) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example7" target="_blank">demo</a>  |
-|  flex-grow | 項目增長比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example8" target="_blank">demo</a>  |
-|  flex-shrink | 項目壓縮比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example9" target="_blank">demo</a>  |
-|  order | 項目排列順序 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example10" target="_blank">demo</a>  |
-|  align-self|項目本身 交叉軸對齊方式(覆蓋容器align-items的設定) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example11" target="_blank">demo</a>  |
+|  flex-basis | 項目 初始大小 (main-size) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example7" target="_blank">demo</a>  |
+|  flex-grow | 項目 彈性增長比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example8" target="_blank">demo</a>  |
+|  flex-shrink | 項目 彈性壓縮比例. |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example9" target="_blank">demo</a>  |
+|  order | 項目 排列順序 |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example10" target="_blank">demo</a>  |
+|  align-self|項目 本身交叉軸對齊方式(覆蓋容器align-items的設定) |<a href="https://jiahongl.github.io/flexbox-demo/dist/#example11" target="_blank">demo</a>  |
 
 |   屬性合併  |   作用  |範例  |
 | :------| :------|:------|
@@ -375,7 +375,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td></td>
             <td>0 1 auto </td>
             <td>flex:initial</td>
-            <td>flex項目默認設定</td>
+            <td>main-size會自動壓縮;flex項目默認設定</td>
         </tr>
         <tr>
             <td></td>
@@ -387,7 +387,7 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
             <td></td>
             <td>1 1 auto</td>
             <td>flex:auto;</td>
-            <td>main-size自動彈性</td>
+            <td>main-size會自動彈性</td>
         </tr>
     </tbody>
 <table>
