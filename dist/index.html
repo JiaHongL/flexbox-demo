@@ -12,7 +12,7 @@
   <title>Flexbox Demo</title>
   <meta content='' name='description'>
   <meta content='' name='author'>
-  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!-- all css -->
   <link href='style/css/style.css' rel='stylesheet'>
 </head>
@@ -68,13 +68,13 @@
           </div>
           <div class="example-item-code">
             <pre class="code">      
-                .box{
-                    display: inline-flex;
-                    width: 100px;
-                    height: 50px;
-                    border: 1px solid black;
-                    background:green;
-                }     
+            .box{
+                display: inline-flex;
+                width: 100px;
+                height: 50px;
+                border: 1px solid black;
+                background:green;
+            }     
             </pre>
           </div>
         </div>
@@ -1756,7 +1756,7 @@
                   } 
               </pre>
           </div>
-          <div class="example-item-view step2" style="padding-top:110px;">
+          <div class="example-item-view step2" style="padding-top:150px;">
             <span class="title">
               先設定container 與 header、main、footer 的排列</br>
               &nbsp;1.container：設定為column排列.</br>
@@ -1808,14 +1808,14 @@
               } 
             </pre>
           </div>
-          <div class="example-item-view step3" style="padding-top:110px;">
+          <div class="example-item-view step3" style="padding-top:150px;">
             <span class="title">
                 先設定main 與 siderbar、content 的排列</br>
                 &nbsp;1.main：設定為row排列.</br>
                 &nbsp;2.siderbar：main-size設為70px;</br>
                 &nbsp;3.content：設為自動彈性,所以項目的main-size自動增長.</br>
                 &nbsp;(align-items默認stretch,所以項目的cross-size自動撐滿.)</br>
-                &nbsp;ps:記得 main-size 不要跟 css height/width 搞混了,指的是main-axis的方向.</br>
+                &nbsp;ps:記得 main-size 不要跟 css height/width 搞混了,指的是main-axis方向的大小.</br>
               </span>
             <div class="container">
               <div class="header">header</div>

@@ -37,6 +37,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .footer-c { padding: 10px; text-align: center; }
 
 body, html { font-family: "Microsoft JhengHei", "Segoe UI", sans-serif; font-size: 14px; letter-spacing: 1px; }
+body .wrapper, html .wrapper { line-height: 19px; }
 
 .rightmenu { position: fixed; top: 10%; right: 0px; z-index: 3000; text-align: center; overflow: hidden; opacity: 0.8; }
 .rightmenu ul { list-style: none; margin: 0px; padding: 0px; border: 1px solid white; border-left: none; }
