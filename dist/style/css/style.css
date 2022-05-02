@@ -1,186 +1,1627 @@
 @charset "UTF-8";
-/* reset    : 樣式歸零 layout   : 整體架構 theme    : 主題樣式 module/  : 各式模組 pages/   : 各式頁面
+/*
+  reset    : 樣式歸零
+  layout   : 整體架構
+  theme    : 主題樣式
+  module/  : 各式模組
+  pages/   : 各式頁面
 */
-/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-body { line-height: 1; }
+body {
+  line-height: 1;
+}
 
-ol, ul { list-style: none; }
+ol, ul {
+  list-style: none;
+}
 
-blockquote, q { quotes: none; }
+blockquote, q {
+  quotes: none;
+}
 
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
 
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding: 50px 50px 0px 50px; }
-.wrapper > .item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 50px 50px 0px 50px;
+}
+.wrapper > .item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
 
-@media only screen and (max-width: 1000px) { .wrapper { padding: 20px 20px 0px 20px; } }
-.example-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; padding-bottom: 1px; padding-left: 1px; }
-.example-container .example-item { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; margin-bottom: 25px; }
-.example-container .example-item .example-item-title { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; padding: 5px; font-weight: 500; font-size: 18px; }
-.example-container .example-item .example-item-view { -webkit-box-flex: 1; -ms-flex: 1 0 50%; flex: 1 0 50%; position: relative; min-height: 300px; padding: 50px; margin-right: -1px; margin-bottom: -1px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.example-container .example-item .example-item-view .title { position: absolute; top: 0; left: 0; padding: 5px; }
-.example-container .example-item .example-item-code { -webkit-box-flex: 1; -ms-flex: 1 0 50%; flex: 1 0 50%; position: relative; min-height: 300px; padding: 20px; margin-right: -1px; margin-bottom: -1px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.example-container .example-item .example-item-code .title { position: absolute; top: 0; left: 0; padding: 2px; }
-.example-container .example-item .example-item-code .code { font-family: 'Source Code Pro'; color: black; font-size: 16px; }
-.example-container .example-item .example-item-code .code:before { display: block; width: calc(100%); margin-left: -3px; margin-top: -3px; padding: 3px; text-transform: uppercase; content: 'scss'; }
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    padding: 20px 20px 0px 20px;
+  }
+}
+.example-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+.example-container .example-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-bottom: 25px;
+}
+.example-container .example-item .example-item-title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.example-container .example-item .example-item-view {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  position: relative;
+  min-height: 300px;
+  padding: 50px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.example-container .example-item .example-item-view .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}
+.example-container .example-item .example-item-code {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  position: relative;
+  min-height: 300px;
+  padding: 20px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.example-container .example-item .example-item-code .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px;
+}
+.example-container .example-item .example-item-code .code {
+  font-family: "Source Code Pro";
+  color: black;
+  font-size: 16px;
+}
+.example-container .example-item .example-item-code .code:before {
+  display: block;
+  width: 100%;
+  margin-left: -3px;
+  margin-top: -3px;
+  padding: 3px;
+  text-transform: uppercase;
+  content: "scss";
+}
 
-@media only screen and (max-width: 1000px) { .example-container .example-item-view { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; }
-  .example-container .example-item-code { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; } }
-.footer-c { padding: 10px; text-align: center; }
+@media only screen and (max-width: 1000px) {
+  .example-container .example-item-view {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .example-container .example-item-code {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+.footer-c {
+  padding: 10px;
+  text-align: center;
+}
 
-body, html { font-family: "Microsoft JhengHei", "Segoe UI", sans-serif; font-size: 14px; letter-spacing: 1px; }
-body .wrapper, html .wrapper { line-height: 19px; }
+body,
+html {
+  font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+body .wrapper,
+html .wrapper {
+  line-height: 19px;
+}
 
-.rightmenu { position: fixed; top: 10%; right: 0px; z-index: 3000; text-align: center; overflow: hidden; opacity: 0.8; }
-.rightmenu ul { list-style: none; margin: 0px; padding: 0px; border: 1px solid white; border-left: none; }
-.rightmenu ul li { color: white; border-radius: 5px; -webkit-box-shadow: 0px 0px 5px 0px #565656; box-shadow: 0px 0px 5px 0px #565656; margin: 5px 0; }
-.rightmenu ul li a { border-radius: 5px; color: white; padding: 10px; display: block; background-color: #0F9B98; }
-.rightmenu ul li a:hover { text-decoration: none; background-color: #10b4b6; }
+.rightmenu {
+  position: fixed;
+  top: 10%;
+  right: 0px;
+  z-index: 3000;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.rightmenu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid white;
+  border-left: none;
+}
+.rightmenu ul li {
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px #565656;
+          box-shadow: 0px 0px 5px 0px #565656;
+  margin: 5px 0;
+}
+.rightmenu ul li a {
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  display: block;
+  background-color: #0F9B98;
+}
+.rightmenu ul li a:hover {
+  text-decoration: none;
+  background-color: #10b4b6;
+}
 
-.index { /* 1.display */ /* 2.flex-direction */ /* 3.flex-wrap */ /* 4.justify-content */ /* 5.align-items */ /* 6.align-content */ /* 7.flex-basis */ /* 8.flex-grow  */ /* 9.flex-shrink */ /* 10.order */ /* 11.align-self */ /* 12.flex-flow */ /* 13.flex-flow */ /* 14. */ /* 15. */ }
-.index .example .step .box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100px; height: 50px; border: 1px solid black; background: green; }
-.index .example .step2 .box { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; width: 100px; height: 50px; border: 1px solid black; background: green; }
-.index .example2 .step .container { width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example2 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step2 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example2 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step3 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example2 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step4 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example2 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step5 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example2 .step6 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; width: 200px; height: 200px; border: 1px solid black; }
-.index .example2 .step6 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example3 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example3 .step .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example3 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example3 .step2 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example3 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example3 .step3 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example3 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; width: 200px; height: 200px; border: 1px solid black; }
-.index .example3 .step4 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step2 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step3 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step4 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step5 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example4 .step6 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; width: 200px; height: 200px; border: 1px solid black; }
-.index .example4 .step6 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step2 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step3 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step4 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step5 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example5 .step6 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; width: 200px; height: 200px; border: 1px solid black; }
-.index .example5 .step6 .container .item { width: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: start; align-content: flex-start; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step2 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: center; align-content: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step3 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: end; align-content: flex-end; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step4 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: justify; align-content: space-between; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step5 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example6 .step6 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: stretch; align-content: stretch; width: 200px; height: 200px; border: 1px solid black; }
-.index .example6 .step6 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example7 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example7 .step .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example7 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example7 .step2 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; -ms-flex-preferred-size: 100px; flex-basis: 100px; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example7 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example7 .step3 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; -ms-flex-preferred-size: 80%; flex-basis: 80%; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example8 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example8 .step .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example8 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example8 .step2 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example8 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example8 .step3 .container .item { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example8 .step3 .container .item2 { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example8 .step3 .container .item3 { -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example9 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example9 .step .container .item { width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example9 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example9 .step2 .container .item { -ms-flex-negative: 0; flex-shrink: 0; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example9 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example9 .step3 .container .item { -ms-flex-negative: 0; flex-shrink: 0; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example9 .step3 .container .item2 { -ms-flex-negative: 1; flex-shrink: 1; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example9 .step3 .container .item3 { -ms-flex-negative: 2; flex-shrink: 2; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example10 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example10 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example10 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; width: 200px; height: 200px; border: 1px solid black; }
-.index .example10 .step2 .container .item { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example10 .step2 .container .item2 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example10 .step2 .container .item3 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example10 .step2 .container .item4 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example11 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 400px; height: 400px; border: 1px solid black; }
-.index .example11 .step .container .item { width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example11 .step .container .item2 { -ms-flex-item-align: start; align-self: flex-start; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example11 .step .container .item3 { -ms-flex-item-align: end; align-self: flex-end; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example11 .step .container .item4 { -ms-flex-item-align: baseline; align-self: baseline; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 25px; line-height: 50px; }
-.index .example11 .step .container .item5 { -ms-flex-item-align: baseline; align-self: baseline; width: 100px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example11 .step .container .item6 { -ms-flex-item-align: stretch; align-self: stretch; width: 100px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example12 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-flow: row-reverse wrap; flex-flow: row-reverse wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example12 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example13 .step .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example13 .step .container .item { -webkit-box-flex: 0; -ms-flex: 0 0 50%; flex: 0 0 50%; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example13 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example13 .step2 .container .item { -webkit-box-flex: initial; -ms-flex: initial; flex: initial; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example13 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example13 .step3 .container .item { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example13 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; width: 200px; height: 200px; border: 1px solid black; }
-.index .example13 .step4 .container .item { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .now .container { width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .now .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .want .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .step .container { width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .step .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .step2 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .step3 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .step4 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .step4 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example14 .step5 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 200px; border: 1px solid black; }
-.index .example14 .step5 .container .item { width: 50px; height: 50px; border: 1px solid black; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.index .example15 .want .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
-.index .example15 .want .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
-.index .example15 .want .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; }
-.index .example15 .want .container .main .siderbar { -webkit-box-flex: 0; -ms-flex: 0 0 70px; flex: 0 0 70px; background: orangered; }
-.index .example15 .want .container .main .content { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: plum; }
-.index .example15 .want .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
-.index .example15 .step .container { width: 300px; height: 300px; border: 1px solid #160606; }
-.index .example15 .step .container .header { background: greenyellow; }
-.index .example15 .step .container .main { background: orange; }
-.index .example15 .step .container .footer { background: gray; }
-.index .example15 .step2 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
-.index .example15 .step2 .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
-.index .example15 .step2 .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; }
-.index .example15 .step2 .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
-.index .example15 .step3 .container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 300px; height: 300px; border: 1px solid #160606; }
-.index .example15 .step3 .container .header { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: greenyellow; }
-.index .example15 .step3 .container .main { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: orange; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; }
-.index .example15 .step3 .container .main .siderbar { -webkit-box-flex: 0; -ms-flex: 0 0 70px; flex: 0 0 70px; background: orangered; }
-.index .example15 .step3 .container .main .content { -webkit-box-flex: 1; -ms-flex: auto; flex: auto; background: plum; }
-.index .example15 .step3 .container .footer { -webkit-box-flex: 0; -ms-flex: 0 0 50px; flex: 0 0 50px; background: gray; }
+.index {
+  /* 1.display */
+  /* 2.flex-direction */
+  /* 3.flex-wrap */
+  /* 4.justify-content */
+  /* 5.align-items */
+  /* 6.align-content */
+  /* 7.flex-basis */
+  /* 8.flex-grow  */
+  /* 9.flex-shrink */
+  /* 10.order */
+  /* 11.align-self */
+  /* 12.flex-flow */
+  /* 13.flex-flow */
+  /* 14. */
+  /* 15. */
+}
+.index .example .step .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  background: green;
+}
+.index .example .step2 .box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  background: green;
+}
+.index .example2 .step .container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example2 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step2 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example2 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step3 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example2 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step4 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example2 .step5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step5 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example2 .step6 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example2 .step6 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example3 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example3 .step .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example3 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example3 .step2 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example3 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example3 .step3 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example3 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example3 .step4 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step2 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step3 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step4 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step5 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step6 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step6 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example4 .step7 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example4 .step7 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step2 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step3 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step4 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step5 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example5 .step6 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example5 .step6 .container .item {
+  width: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step2 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step3 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step4 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step5 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example6 .step6 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example6 .step6 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example7 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example7 .step .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example7 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example7 .step2 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example7 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example7 .step3 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example8 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example8 .step .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example8 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example8 .step2 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example8 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example8 .step3 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example8 .step3 .container .item2 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example8 .step3 .container .item3 {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example9 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example9 .step .container .item {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example9 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example9 .step2 .container .item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example9 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example9 .step3 .container .item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example9 .step3 .container .item2 {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example9 .step3 .container .item3 {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example10 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example10 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example10 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example10 .step2 .container .item {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example10 .step2 .container .item2 {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example10 .step2 .container .item3 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example10 .step2 .container .item4 {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example11 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+.index .example11 .step .container .item {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example11 .step .container .item2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example11 .step .container .item3 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example11 .step .container .item4 {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 25px;
+  line-height: 50px;
+}
+.index .example11 .step .container .item5 {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example11 .step .container .item6 {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  width: 100px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example12 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example12 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example13 .step .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example13 .step .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example13 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example13 .step2 .container .item {
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example13 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example13 .step3 .container .item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example13 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example13 .step4 .container .item {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .now .container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .now .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .want .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .want .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .step .container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .step .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .step2 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .step3 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .step4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .step4 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example14 .step5 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.index .example14 .step5 .container .item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.index .example15 .want .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #160606;
+}
+.index .example15 .want .container .header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: greenyellow;
+}
+.index .example15 .want .container .main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.index .example15 .want .container .main .siderbar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  background: orangered;
+}
+.index .example15 .want .container .main .content {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background: plum;
+}
+.index .example15 .want .container .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: gray;
+}
+.index .example15 .step .container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #160606;
+}
+.index .example15 .step .container .header {
+  background: greenyellow;
+}
+.index .example15 .step .container .main {
+  background: orange;
+}
+.index .example15 .step .container .footer {
+  background: gray;
+}
+.index .example15 .step2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #160606;
+}
+.index .example15 .step2 .container .header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: greenyellow;
+}
+.index .example15 .step2 .container .main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background: orange;
+}
+.index .example15 .step2 .container .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: gray;
+}
+.index .example15 .step3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #160606;
+}
+.index .example15 .step3 .container .header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: greenyellow;
+}
+.index .example15 .step3 .container .main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.index .example15 .step3 .container .main .siderbar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  background: orangered;
+}
+.index .example15 .step3 .container .main .content {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background: plum;
+}
+.index .example15 .step3 .container .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  background: gray;
+}
