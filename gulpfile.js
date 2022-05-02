@@ -68,7 +68,7 @@ gulp.task('copyfile', () => {
       .then(() => console.log('assets success!'))
       .catch(err => console.error('assets error', err));
     // output plugins folder
-    fse.copy('src/plugins', 'dist/plugins')
+    fse.copy('src/plugins/jquery.min.js', 'dist/plugins/jquery.min.js')
     .then(() => console.log('plugins success!'))
     .catch(err => console.error('plugins error', err));
   }).catch(err => console.error('remove dist error', err));
