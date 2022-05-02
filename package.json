@@ -14,11 +14,12 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^6.1.2",
-    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
     "gulp-shell": "^0.6.3",
     "gulp-uglify": "^3.0.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.51.0"
   },
   "repository": {
     "type": "git",

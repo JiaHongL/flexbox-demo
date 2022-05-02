@@ -185,6 +185,11 @@ PS:column排列方式為上到下，所以主軸方向(main-axis)就會變成上
       <td>space-around</td>
       <td>將空白平均分配每個項目左右兩側</td>
    </tr>
+      <tr>
+      <td></td>
+      <td>space-evenly</td>
+      <td>將空白平均分配給項目之間的間隔</td>
+   </tr>
    <tr>
       <td>align-items</td>
       <td colspan="2">容器項目 交錯軸(cross-axis)對齊方式</td>

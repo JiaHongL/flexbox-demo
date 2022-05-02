@@ -3,10 +3,10 @@ const webserver = require('gulp-webserver');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const depLinker = require('dep-linker');
-const compass = require('gulp-compass');
 const autoprefixer = require('gulp-autoprefixer');
 const fse = require('fs-extra')
 const babel = require('gulp-babel');
+const gulpSass = require('gulp-sass')(require('sass'));
 
 // i. creat webserver
 gulp.task('webserver', () => {
@@ -23,13 +23,7 @@ gulp.task('webserver', () => {
 // ii. scss -> css (autoprefixer)
 gulp.task('compass', () => {
   return gulp.src('src/style/scss/*.scss')
-    .pipe(compass({
-      sass: 'src/style/scss/',
-      css: 'src/style/css/',
-      sourcemap: false,
-      style: 'compact',
-      comments: false
-    }))
+    .pipe(gulpSass())  
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('src/style/css/'));
 })

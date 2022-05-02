@@ -277,6 +277,22 @@
                 }
             }
         }
+        .step7 {
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                .item {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid black;
+                    box-sizing: border-box;
+                }
+            }
+        }
     }
     /* 5.align-items */
     .example5 {
